@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="Transformation of a picture into string art." />
-    <title>MUZ STRING ART</title>
+    <title>MUZ STRING ART</title>  
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,12 +21,15 @@
       <input type="checkbox" id="fullscreen-checkbox-id" class="hidden">
       <div class="demo">
         <input type="checkbox" id="side-pane-checkbox-id" class="hidden">
-        <div id="canvas-container">
+        <div id="canvas-container" style="border: 11px solid rgb(0, 0, 0);">
+
           <canvas id="canvas"></canvas>
+
           <div class="loader">
             <span></span>
             <div class="loader-animation"></div>
-          </div>
+          </div>         
+
           <div id="indicators">
             <div id="pegs-count-indicator-id">
               ÇİVİ SAYISI:<span></span>
@@ -34,6 +37,7 @@
             <div id="segments-count-indicator-id">
               DÜĞÜM SAYISI:<span></span>
             </div>
+            
             <div id="error-average-indicator-id">
               Error (average): <span></span>
             </div>
@@ -42,20 +46,29 @@
             </div>
             <div id="error-variance-indicator-id">
               Error (variance): <span></span>
-            </div>
-          </div>
+            </div>            
+          </div>         
+          
           <div id="canvas-buttons-column">
+            
             <label class="canvas-button" id="fullscreen-toggle-id" for="fullscreen-checkbox-id"></label>
             <label class="canvas-button" id="side-pane-toggle-id" for="side-pane-checkbox-id"></label>
-          </div>
-        </div>
+            
+          </div>          
+        </div>    
+        
+        
         <div class="controls-block">
+          
           <label class="canvas-button" id="side-pane-close-toggle-id" for="side-pane-checkbox-id">
+            
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <line x1="22" y1="22" x2="10" y2="10" stroke-linecap="round" stroke-width="2" />
               <line x1="22" y1="10" x2="10" y2="22" stroke-linecap="round" stroke-width="2" />
             </svg>
+            
           </label>
+          <font color="black"><dfn>Desteklenen formatlar (.png .jpg .bmp .webp) </dfn></font>
           <section class="controls-section">
             <h2>GİRİŞ</h2>
 
@@ -196,7 +209,7 @@
               <div class="control" id="control-thickness-range-id">
                 <label>İP KALINLIĞI</label>
                 <div class="range-container">
-                  <input type="range" min="0.1" max="1" value="0.20" step="0.05" class="slider" id="thickness-range-id">
+                  <input type="range" min="0.05" max="1.5" value="0.12" step="0.01" class="slider" id="thickness-range-id">
                   <div class="range-skin-container">
                     <div class="range-stub">
                       <span class="range-bar range-bar-left range-stub-left"></span>
@@ -308,5 +321,7 @@
     <script src="script/page.min.js?v=2021-12-05T18%3A35%3A01.006Z"></script>
     <script src="script/main.min.js?v=2021-12-05T18%3A35%3A01.006Z"></script>
   </body>
+
+  
 
 </html>
